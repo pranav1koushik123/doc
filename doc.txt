@@ -1,0 +1,14 @@
+# Use official Java image
+FROM openjdk:17
+
+# Copy the Java file to the container
+COPY Hello.java /app/Hello.java
+
+# Set the working directory
+WORKDIR /app
+
+# Compile the Java program
+RUN javac Hello.java
+
+# Run the program
+CMD ["java", "Hello"]
